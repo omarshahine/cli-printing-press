@@ -1,5 +1,19 @@
 # Changelog
 
+## [4.4.0](https://github.com/mvanhorn/cli-printing-press/compare/v4.3.0...v4.4.0) (2026-05-11)
+
+
+### Features
+
+* **cli:** promote html_scrape reachability mode when captcha-tier protection blocks JSON + SSR sibling carries state blob ([#1065](https://github.com/mvanhorn/cli-printing-press/issues/1065)) ([d7e2d74](https://github.com/mvanhorn/cli-printing-press/commit/d7e2d74f32fcefbb730366c40bb4c33974bc3ead))
+
+
+### Bug Fixes
+
+* **ci:** drop cancel-in-progress from pr-title workflow ([#1068](https://github.com/mvanhorn/cli-printing-press/issues/1068)) ([424199a](https://github.com/mvanhorn/cli-printing-press/commit/424199a7a4bd9b90c1787a0a30d1c00228728630))
+* **cli:** emit --body-json fallback for oneOf/anyOf request bodies ([#994](https://github.com/mvanhorn/cli-printing-press/issues/994)) ([910c228](https://github.com/mvanhorn/cli-printing-press/commit/910c228d48e4de0bdc21e6ba4b5f39e827ef2f5a)), closes [#977](https://github.com/mvanhorn/cli-printing-press/issues/977)
+* **cli:** validate ListIDs resourceType to close SQL injection ([#1000](https://github.com/mvanhorn/cli-printing-press/issues/1000)) ([242a56b](https://github.com/mvanhorn/cli-printing-press/commit/242a56bc6a2d88cc8b93ac29d90254a7f7d6e1e9))
+
 ## [4.3.0](https://github.com/mvanhorn/cli-printing-press/compare/v4.2.2...v4.3.0) (2026-05-11)
 
 
