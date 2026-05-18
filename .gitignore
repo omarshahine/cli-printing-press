@@ -12,3 +12,6 @@ catalog/specs/*.graphql
 library/
 dist/
 claude-upgrade-progress.json
+
+# Clawpatch local review state
+.clawpatch/
