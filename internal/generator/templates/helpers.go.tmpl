@@ -1303,6 +1303,19 @@ func extractPaginatedItems(obj map[string]json.RawMessage) ([]json.RawMessage, b
 		}
 	}
 
+	// HAL / HATEOAS envelope: collections live under _embedded.<name>
+	// (Ticketmaster Discovery, Spring Data REST, and other HATEOAS APIs).
+	// Recurse into _embedded so the same known-field and single-array
+	// heuristics find the collection one level down.
+	if embRaw, ok := obj["_embedded"]; ok {
+		var embedded map[string]json.RawMessage
+		if json.Unmarshal(embRaw, &embedded) == nil {
+			if nested, ok := extractPaginatedItems(embedded); ok {
+				return nested, true
+			}
+		}
+	}
+
 	var onlyArray []json.RawMessage
 	arrayCount := 0
 	for key, raw := range obj {
